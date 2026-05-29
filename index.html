@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dan Koe 思想地图</title>
+    <meta
+      name="description"
+      content="Dan Koe 核心观点的中文互动知识地图：专注、Human 3.0、一个人公司、技能堆叠、创作者经济、写作与生活方式设计。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="hero">
+      <div class="hero__media" aria-hidden="true">
+        <img src="./assets/dan-koe-knowledge-atlas.jpg" alt="" />
+      </div>
+      <nav class="topbar" aria-label="页面导航">
+        <a href="#atlas">思想地图</a>
+        <a href="#cards">观点卡</a>
+        <a href="#lab">自测</a>
+        <a href="#sources">来源</a>
+      </nav>
+      <section class="hero__content">
+        <p class="eyebrow">The Koe Letter / The Art Of Focus / HUMAN 3.0</p>
+        <h1>Dan Koe 思想地图</h1>
+        <p class="lead">
+          把 Dan Koe 关于自我发展、专注、创作者经济和一个人公司的公开观点，整理成可搜索、可切换、可练习的中文知识系统。
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#cards">开始吸收</a>
+          <a class="button button--ghost" href="#route">看学习路线</a>
+        </div>
+        <dl class="metrics" aria-label="内容规模">
+          <div>
+            <dt>8</dt>
+            <dd>思想主类</dd>
+          </div>
+          <div>
+            <dt>32</dt>
+            <dd>观点卡</dd>
+          </div>
+          <div>
+            <dt>28</dt>
+            <dd>来源链接</dd>
+          </div>
+        </dl>
+      </section>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="阅读姿态">
+        <strong>边界：</strong>
+        这不是 Dan Koe 全网逐条语录库，而是基于其公开长文、书籍摘要、视频转录与近期文章整理出的高覆盖思想框架。直接引文只保留短摘，主体为中文转述与例子。
+      </section>
+
+      <section class="atlas" id="atlas">
+        <div class="section-head">
+          <p class="eyebrow">Map</p>
+          <h2>一眼看懂他的思想操作系统</h2>
+        </div>
+        <div class="atlas__grid">
+          <div class="map" id="mapNodes" aria-label="可点击思想地图"></div>
+          <article class="map-panel" id="mapPanel">
+            <p class="eyebrow">当前节点</p>
+            <h3>选择一个思想主类</h3>
+            <p>点击地图节点后，这里会显示该类的核心命题、关键词与相关观点卡。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="route" id="route">
+        <div class="section-head">
+          <p class="eyebrow">Route</p>
+          <h2>快速吸收路线</h2>
+        </div>
+        <div class="route__timeline">
+          <article>
+            <span>30 分钟</span>
+            <h3>先抓骨架</h3>
+            <p>读“现代世界诊断”“专注与意义”“一个人公司”三类，每类只看第一张卡。</p>
+          </article>
+          <article>
+            <span>3 小时</span>
+            <h3>建立系统</h3>
+            <p>按地图顺时针读完 8 类，再做 Human 3.0 自测，标记最弱象限。</p>
+          </article>
+          <article>
+            <span>30 天</span>
+            <h3>变成行动</h3>
+            <p>每天选一张卡实践：写一条短内容、做一小时深度工作、推出一个最小报价。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="workbench" id="cards">
+        <div class="section-head">
+          <p class="eyebrow">Cards</p>
+          <h2>观点卡片库</h2>
+        </div>
+        <div class="toolbar" role="search">
+          <label class="search">
+            <span>搜索</span>
+            <input id="searchInput" type="search" placeholder="输入：专注、写作、Human 3.0、一个人公司..." />
+          </label>
+          <div class="segmented" aria-label="内容视角">
+            <button class="active" data-view="all">全部</button>
+            <button data-view="idea">原观点</button>
+            <button data-view="example">例子</button>
+            <button data-view="practice">练习</button>
+          </div>
+        </div>
+        <div class="filters" id="filters" aria-label="分类筛选"></div>
+        <div class="cards" id="cardsGrid"></div>
+      </section>
+
+      <section class="lab" id="lab">
+        <div class="section-head">
+          <p class="eyebrow">Lab</p>
+          <h2>Human 3.0 四象限自测</h2>
+        </div>
+        <div class="lab__layout">
+          <form class="assessment" id="assessment">
+            <label>
+              <span>Mind：清晰思考、反思、整合观点</span>
+              <input type="range" min="1" max="10" value="5" name="mind" />
+            </label>
+            <label>
+              <span>Body：能量、睡眠、训练、身体状态</span>
+              <input type="range" min="1" max="10" value="5" name="body" />
+            </label>
+            <label>
+              <span>Spirit：意义、人际、价值观、连接感</span>
+              <input type="range" min="1" max="10" value="5" name="spirit" />
+            </label>
+            <label>
+              <span>Vocation：技能、作品、收入、影响力</span>
+              <input type="range" min="1" max="10" value="5" name="vocation" />
+            </label>
+          </form>
+          <article class="assessment-result" id="assessmentResult">
+            <p class="eyebrow">Metatype</p>
+            <h3>Human 2.0 倾向</h3>
+            <p>你有一定自主性，但还需要把目标、技能、能量和关系整合成一个可持续系统。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sources" id="sources">
+        <div class="section-head">
+          <p class="eyebrow">Sources</p>
+          <h2>主要资料来源</h2>
+        </div>
+        <div class="source-list" id="sourceList"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Made as a local interactive synthesis. 原始观点归 Dan Koe 及原作者所有；中文例子与结构化整理为本页面新增。</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
